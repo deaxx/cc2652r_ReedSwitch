@@ -1,3 +1,3 @@
-# CC2652R_ReedSwitch
+# cc2652r_ReedSwitch
 
 CC2652R ReedSwitch
