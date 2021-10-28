@@ -7329,6 +7329,8 @@ Source:  Data sheet </description>
 <part name="R6" library="discretes-dev" deviceset="RES0402" device="" value="4.7k"/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="C26" library="discretes-dev" deviceset="CAP0402" device=""/>
+<part name="GND31" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7566,22 +7568,22 @@ Source:  Data sheet </description>
 <instance part="GND23" gate="1" x="109.22" y="7.62" smashed="yes">
 <attribute name="VALUE" x="106.68" y="5.08" size="1.778" layer="96"/>
 </instance>
-<instance part="E1" gate="G$1" x="203.2" y="104.14" smashed="yes">
-<attribute name="NAME" x="206.248" y="99.06" size="1.778" layer="95" font="vector"/>
+<instance part="E1" gate="G$1" x="213.36" y="104.14" smashed="yes">
+<attribute name="NAME" x="216.408" y="99.06" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="C21" gate="G$1" x="193.04" y="91.44" smashed="yes" rot="R90">
-<attribute name="NAME" x="191.389" y="92.964" size="1.778" layer="95" font="vector" rot="R90"/>
+<instance part="C21" gate="G$1" x="198.12" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="196.469" y="92.964" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
-<instance part="GND7" gate="1" x="205.74" y="88.9" smashed="yes">
-<attribute name="VALUE" x="203.2" y="86.36" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="215.9" y="88.9" smashed="yes">
+<attribute name="VALUE" x="213.36" y="86.36" size="1.778" layer="96"/>
 </instance>
-<instance part="TP1" gate="G$1" x="210.82" y="101.6" smashed="yes">
-<attribute name="NAME" x="209.55" y="102.87" size="1.778" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="212.09" y="100.33" size="1.778" layer="97"/>
+<instance part="TP1" gate="G$1" x="223.52" y="91.44" smashed="yes">
+<attribute name="NAME" x="222.25" y="92.71" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="224.79" y="90.17" size="1.778" layer="97"/>
 </instance>
-<instance part="TP2" gate="G$1" x="215.9" y="101.6" smashed="yes" rot="R180">
-<attribute name="NAME" x="218.44" y="106.045" size="1.778" layer="95" rot="R180"/>
-<attribute name="TP_SIGNAL_NAME" x="213.36" y="102.87" size="1.778" layer="97" rot="R180"/>
+<instance part="TP2" gate="G$1" x="228.6" y="91.44" smashed="yes" rot="R180">
+<attribute name="NAME" x="231.14" y="95.885" size="1.778" layer="95" rot="R180"/>
+<attribute name="TP_SIGNAL_NAME" x="226.06" y="92.71" size="1.778" layer="97" rot="R180"/>
 </instance>
 <instance part="BT1" gate="G$1" x="157.48" y="43.18" smashed="yes">
 <attribute name="NAME" x="157.48" y="47.498" size="1.778" layer="95" font="vector" align="bottom-center"/>
@@ -7651,6 +7653,12 @@ Source:  Data sheet </description>
 </instance>
 <instance part="P+10" gate="VCC" x="259.08" y="71.12" smashed="yes">
 <attribute name="VALUE" x="256.54" y="68.58" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C26" gate="G$1" x="205.74" y="83.82" smashed="yes" rot="R180">
+<attribute name="NAME" x="204.216" y="82.169" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
+<instance part="GND31" gate="1" x="205.74" y="73.66" smashed="yes">
+<attribute name="VALUE" x="203.2" y="71.12" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -7924,7 +7932,7 @@ Source:  Data sheet </description>
 </segment>
 <segment>
 <pinref part="E1" gate="G$1" pin="GND"/>
-<wire x1="205.74" y1="93.98" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="93.98" x2="215.9" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -7969,6 +7977,11 @@ Source:  Data sheet </description>
 <pinref part="GND30" gate="1" pin="GND"/>
 <wire x1="119.38" y1="10.16" x2="119.38" y2="11.43" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="C26" gate="G$1" pin="1"/>
+<pinref part="GND31" gate="1" pin="GND"/>
+<wire x1="205.74" y1="80.01" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DCOUPL" class="0">
@@ -8126,15 +8139,6 @@ Source:  Data sheet </description>
 <wire x1="106.68" y1="121.92" x2="113.03" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="L4" gate="G$1" pin="2"/>
 <wire x1="106.68" y1="119.38" x2="106.68" y2="121.92" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="C19" gate="G$1" pin="2"/>
-<wire x1="190.5" y1="91.44" x2="189.23" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="C21" gate="G$1" pin="1"/>
-<wire x1="189.23" y1="91.44" x2="186.69" y2="91.44" width="0.1524" layer="91"/>
-<junction x="189.23" y="91.44"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -8447,9 +8451,20 @@ Source:  Data sheet </description>
 <net name="N$9" class="0">
 <segment>
 <pinref part="C21" gate="G$1" pin="2"/>
-<wire x1="196.85" y1="91.44" x2="203.2" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="201.93" y1="91.44" x2="205.74" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="E1" gate="G$1" pin="SIGNAL"/>
-<wire x1="203.2" y1="91.44" x2="203.2" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="91.44" x2="213.36" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="91.44" x2="213.36" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="C26" gate="G$1" pin="2"/>
+<wire x1="205.74" y1="91.44" x2="205.74" y2="87.63" width="0.1524" layer="91"/>
+<junction x="205.74" y="91.44"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="C19" gate="G$1" pin="2"/>
+<pinref part="C21" gate="G$1" pin="1"/>
+<wire x1="186.69" y1="91.44" x2="194.31" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
