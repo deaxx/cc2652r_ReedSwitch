@@ -7265,10 +7265,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <part name="L4" library="discretes-dev" deviceset="IND0402" device="IND0402" value="2.4nH"/>
 <part name="L5" library="discretes-dev" deviceset="IND0402" device="IND0402" value="2nH"/>
 <part name="L6" library="discretes-dev" deviceset="IND0402" device="IND0402" value="2nH"/>
-<part name="C20" library="discretes-dev" deviceset="CAP0402" device=""/>
-<part name="C22" library="discretes-dev" deviceset="CAP0402" device=""/>
-<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R2" library="discretes-dev" deviceset="RES0402" device="" value="2.2k"/>
 <part name="G" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-GREEN" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="GREEN"/>
 <part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -7492,18 +7488,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <instance part="L6" gate="G$1" x="167.64" y="91.44" smashed="yes">
 <attribute name="NAME" x="165.095559375" y="93.98148125" size="2.54148125" layer="95"/>
 </instance>
-<instance part="C20" gate="G$1" x="91.44" y="88.9" smashed="yes">
-<attribute name="NAME" x="92.964" y="90.551" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="C22" gate="G$1" x="101.6" y="73.66" smashed="yes">
-<attribute name="NAME" x="103.124" y="75.311" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="GND6" gate="1" x="101.6" y="66.04" smashed="yes">
-<attribute name="VALUE" x="99.06" y="63.5" size="1.778" layer="96"/>
-</instance>
-<instance part="GND20" gate="1" x="91.44" y="96.52" smashed="yes" rot="R180">
-<attribute name="VALUE" x="93.98" y="99.06" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="R2" gate="G$1" x="99.06" y="38.1" smashed="yes" rot="R90">
 <attribute name="NAME" x="96.51851875" y="30.475559375" size="2.54148125" layer="95" rot="R90"/>
 </instance>
@@ -7607,14 +7591,14 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <instance part="GND27" gate="1" x="284.48" y="48.26" smashed="yes" rot="R180">
 <attribute name="VALUE" x="287.02" y="50.8" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="REEDSWITCH" gate="G$1" x="119.38" y="35.56" smashed="yes">
-<attribute name="NAME" x="121.92" y="38.1" size="1.778" layer="95"/>
+<instance part="REEDSWITCH" gate="G$1" x="119.38" y="17.78" smashed="yes">
+<attribute name="NAME" x="121.92" y="20.32" size="1.778" layer="95"/>
 </instance>
 <instance part="P+8" gate="VCC" x="119.38" y="50.8" smashed="yes">
 <attribute name="VALUE" x="116.84" y="48.26" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R3" gate="G$1" x="119.38" y="20.32" smashed="yes" rot="R90">
-<attribute name="NAME" x="116.83851875" y="12.695559375" size="2.54148125" layer="95" rot="R90"/>
+<instance part="R3" gate="G$1" x="119.38" y="38.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="116.83851875" y="30.475559375" size="2.54148125" layer="95" rot="R90"/>
 </instance>
 <instance part="GND30" gate="1" x="119.38" y="7.62" smashed="yes">
 <attribute name="VALUE" x="116.84" y="5.08" size="1.778" layer="96"/>
@@ -7648,20 +7632,15 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <wire x1="91.44" y1="78.74" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="X48M_P"/>
 <wire x1="91.44" y1="81.28" x2="83.82" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="C20" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="85.09" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
-<junction x="91.44" y="81.28"/>
 </segment>
 </net>
 <net name="X48M_N" class="0">
 <segment>
 <pinref part="IC3" gate="G$1" pin="X48M_N"/>
 <wire x1="83.82" y1="83.82" x2="101.6" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="83.82" x2="101.6" y2="77.47" width="0.1524" layer="91"/>
 <pinref part="Y1" gate="G$1" pin="3"/>
 <wire x1="101.6" y1="78.74" x2="99.06" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="C22" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="78.74" x2="101.6" y2="77.47" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="83.82" x2="101.6" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="X32K_Q2" class="0">
@@ -7883,16 +7862,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C22" gate="G$1" pin="2"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="101.6" y1="69.85" x2="101.6" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C20" gate="G$1" pin="1"/>
-<pinref part="GND20" gate="1" pin="GND"/>
-<wire x1="91.44" y1="92.71" x2="91.44" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND21" gate="1" pin="GND"/>
 <pinref part="G" gate="G$1" pin="C"/>
 <wire x1="99.06" y1="10.16" x2="99.06" y2="20.32" width="0.1524" layer="91"/>
@@ -7951,14 +7920,14 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <pinref part="GND27" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="GND30" gate="1" pin="GND"/>
-<wire x1="119.38" y1="10.16" x2="119.38" y2="11.43" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-</segment>
-<segment>
 <pinref part="C26" gate="G$1" pin="1"/>
 <pinref part="GND31" gate="1" pin="GND"/>
 <wire x1="205.74" y1="80.01" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="REEDSWITCH" gate="G$1" pin="2"/>
+<pinref part="GND30" gate="1" pin="GND"/>
+<wire x1="119.38" y1="12.7" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DCOUPL" class="0">
@@ -8032,11 +8001,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <junction x="284.48" y="40.64"/>
 </segment>
 <segment>
-<pinref part="REEDSWITCH" gate="G$1" pin="1"/>
-<pinref part="P+8" gate="VCC" pin="VCC"/>
-<wire x1="119.38" y1="43.18" x2="119.38" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="251.46" y1="67.31" x2="251.46" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="VCC" pin="VCC"/>
@@ -8045,6 +8009,11 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="259.08" y1="67.31" x2="259.08" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="P+8" gate="VCC" pin="VCC"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="119.38" y1="48.26" x2="119.38" y2="46.99" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TCK" class="0">
@@ -8150,12 +8119,13 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <label x="35.56" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="REEDSWITCH" gate="G$1" pin="2"/>
-<wire x1="119.38" y1="29.21" x2="119.38" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="30.48" x2="124.46" y2="30.48" width="0.1524" layer="91"/>
-<junction x="119.38" y="30.48"/>
-<label x="124.46" y="30.48" size="1.778" layer="95"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="REEDSWITCH" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="29.21" x2="119.38" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="27.94" x2="119.38" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="27.94" x2="129.54" y2="27.94" width="0.1524" layer="91"/>
+<junction x="119.38" y="27.94"/>
+<label x="129.54" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="3" class="0">
@@ -8442,6 +8412,11 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <pinref part="C19" gate="G$1" pin="2"/>
 <pinref part="C21" gate="G$1" pin="1"/>
 <wire x1="186.69" y1="91.44" x2="194.31" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<wire x1="101.6" y1="69.85" x2="101.6" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
