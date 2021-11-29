@@ -7290,7 +7290,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="HTU21" library="HTU21D" deviceset="HTU21D" device=""/>
 <part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="C24" library="ok-discretes-dev" deviceset="CAP" device="-0402" value="100n"/>
 <part name="BME280" library="bosch-bme280" deviceset="BME280" device=""/>
 <part name="C25" library="ok-discretes-dev" deviceset="CAP" device="-0402" value="100n"/>
@@ -7572,9 +7571,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 </instance>
 <instance part="GND25" gate="1" x="276.86" y="15.24" smashed="yes">
 <attribute name="VALUE" x="274.32" y="12.7" size="1.778" layer="96"/>
-</instance>
-<instance part="P+7" gate="VCC" x="276.86" y="48.26" smashed="yes">
-<attribute name="VALUE" x="274.32" y="45.72" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C24" gate="A" x="274.32" y="27.94" smashed="yes" rot="R90">
 <attribute name="NAME" x="278.003" y="28.4226" size="1.778" layer="95"/>
@@ -7976,31 +7972,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <wire x1="226.06" y1="27.94" x2="226.06" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="HTU21" gate="G$1" pin="VDD"/>
-<wire x1="269.24" y1="35.56" x2="274.32" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="274.32" y1="35.56" x2="276.86" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="276.86" y1="35.56" x2="276.86" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="P+7" gate="VCC" pin="VCC"/>
-<pinref part="C24" gate="A" pin="2"/>
-<wire x1="274.32" y1="35.56" x2="274.32" y2="30.48" width="0.1524" layer="91"/>
-<junction x="274.32" y="35.56"/>
-<pinref part="BME280" gate="G$1" pin="CSB"/>
-<wire x1="287.02" y1="30.48" x2="284.48" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="30.48" x2="284.48" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="BME280" gate="G$1" pin="VDD"/>
-<wire x1="284.48" y1="35.56" x2="287.02" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="35.56" x2="276.86" y2="35.56" width="0.1524" layer="91"/>
-<junction x="284.48" y="35.56"/>
-<junction x="276.86" y="35.56"/>
-<pinref part="BME280" gate="G$1" pin="VDDIO"/>
-<wire x1="312.42" y1="33.02" x2="314.96" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="314.96" y1="33.02" x2="314.96" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="314.96" y1="40.64" x2="284.48" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="40.64" x2="284.48" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="C25" gate="A" pin="1"/>
-<junction x="284.48" y="40.64"/>
-</segment>
-<segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="251.46" y1="67.31" x2="251.46" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="VCC" pin="VCC"/>
@@ -8212,6 +8183,29 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/cc2652r.pdf"&gt; Datasheet 
 <pinref part="IC3" gate="G$1" pin="DIO_11"/>
 <wire x1="38.1" y1="45.72" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
 <label x="35.56" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="HTU21" gate="G$1" pin="VDD"/>
+<wire x1="269.24" y1="35.56" x2="274.32" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="C24" gate="A" pin="2"/>
+<wire x1="274.32" y1="35.56" x2="274.32" y2="30.48" width="0.1524" layer="91"/>
+<junction x="274.32" y="35.56"/>
+<pinref part="BME280" gate="G$1" pin="CSB"/>
+<wire x1="287.02" y1="30.48" x2="284.48" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="30.48" x2="284.48" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="BME280" gate="G$1" pin="VDD"/>
+<wire x1="284.48" y1="35.56" x2="287.02" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="35.56" x2="274.32" y2="35.56" width="0.1524" layer="91"/>
+<junction x="284.48" y="35.56"/>
+<pinref part="BME280" gate="G$1" pin="VDDIO"/>
+<wire x1="312.42" y1="33.02" x2="314.96" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="33.02" x2="314.96" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="314.96" y1="40.64" x2="284.48" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="40.64" x2="284.48" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="C25" gate="A" pin="1"/>
+<junction x="284.48" y="40.64"/>
+<wire x1="274.32" y1="35.56" x2="274.32" y2="48.26" width="0.1524" layer="91"/>
+<label x="274.32" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="12" class="0">
