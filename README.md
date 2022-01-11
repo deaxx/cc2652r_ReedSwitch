@@ -1,4 +1,4 @@
-<p><strong>CC2652R ReedSwitch </strong></p>
+<p><strong>CC2652R/RB ReedSwitch </strong></p>
 <p>Box</p>
 <p><a href="https://a.aliexpress.com/_9vHRin">https://a.aliexpress.com/_9vHRin </a></p>
 <p>CR2032 holder</p>
